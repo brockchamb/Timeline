@@ -9,11 +9,23 @@
 import UIKit
 
 class LoginSignupViewController: UIViewController {
+    
+    @IBOutlet weak var usernameTextField: UITextField!
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var bioTextField: UITextField!
+    
+    @IBOutlet weak var urlTextField: UITextField!
+    
+    @IBOutlet weak var actionButton: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,4 +44,19 @@ class LoginSignupViewController: UIViewController {
     }
     */
 
+    
+    enum ViewMode {
+        case Login
+        case Signup
+    }
+    
+    let mode: ViewMode = .Signup
+    
+    func updateViewBasedOnMode() {
+        
+    }
+    
+    
+    
+    
 }
