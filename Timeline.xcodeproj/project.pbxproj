@@ -24,6 +24,9 @@
 		841196711C7D06600094A9D4 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841196701C7D06600094A9D4 /* Comment.swift */; };
 		841196731C7D0A600094A9D4 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841196721C7D0A600094A9D4 /* Like.swift */; };
 		841196751C7D0B1B0094A9D4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841196741C7D0B1B0094A9D4 /* Post.swift */; };
+		841196781C7D12C80094A9D4 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841196771C7D12C80094A9D4 /* UserController.swift */; };
+		8411967A1C7D20270094A9D4 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841196791C7D20270094A9D4 /* PostController.swift */; };
+		8411967C1C7D29BB0094A9D4 /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411967B1C7D29BB0094A9D4 /* ImageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		841196701C7D06600094A9D4 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		841196721C7D0A600094A9D4 /* Like.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
 		841196741C7D0B1B0094A9D4 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		841196771C7D12C80094A9D4 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		841196791C7D20270094A9D4 /* PostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		8411967B1C7D29BB0094A9D4 /* ImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +181,9 @@
 		841196761C7D0CBB0094A9D4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				841196771C7D12C80094A9D4 /* UserController.swift */,
+				841196791C7D20270094A9D4 /* PostController.swift */,
+				8411967B1C7D29BB0094A9D4 /* ImageController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -315,11 +324,14 @@
 				841196671C7D013F0094A9D4 /* AddPhotoTableViewController.swift in Sources */,
 				841196751C7D0B1B0094A9D4 /* Post.swift in Sources */,
 				8411965F1C7CFAC10094A9D4 /* TimelineTableViewController.swift in Sources */,
+				8411967C1C7D29BB0094A9D4 /* ImageController.swift in Sources */,
+				841196781C7D12C80094A9D4 /* UserController.swift in Sources */,
 				01E3FC251BE92C7600187536 /* AppDelegate.swift in Sources */,
 				841196711C7D06600094A9D4 /* Comment.swift in Sources */,
 				8411966F1C7D04AE0094A9D4 /* User.swift in Sources */,
 				841196651C7D00670094A9D4 /* ProfileViewController.swift in Sources */,
 				841196731C7D0A600094A9D4 /* Like.swift in Sources */,
+				8411967A1C7D20270094A9D4 /* PostController.swift in Sources */,
 				841196631C7CFECF0094A9D4 /* UserSearchTableViewController.swift in Sources */,
 				841196611C7CFB6F0094A9D4 /* PostDetailTableViewController.swift in Sources */,
 			);
