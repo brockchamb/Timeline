@@ -9,6 +9,24 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    
+    var user: User?
+    
+    var userPosts: [Post] = []
+    
+    func updateBasedOnUser() {
+        guard let user = user else {return}
+        
+        title = user.username
+        
+        PostController.postsForUser(user) { (posts) -> Void in
+            if let posts = posts {
+                self.userPosts = posts
+            } else {
+                self.userPosts = []
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

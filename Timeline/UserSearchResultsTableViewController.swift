@@ -1,30 +1,21 @@
 //
-//  TimelineTableViewController.swift
+//  UserSearchResultsTableViewController.swift
 //  Timeline
 //
-//  Created by admin on 2/23/16.
+//  Created by admin on 2/25/16.
 //  Copyright © 2016 DevMountain. All rights reserved.
 //
 
 import UIKit
 
-class TimelineTableViewController: UITableViewController {
+class UserSearchResultsTableViewController: UITableViewController {
+    
+    var usersResultsDataSource: [User] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-       
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        if UserController().currentUser == nil {
-            performSegueWithIdentifier("loginSignupSegue", sender: self)
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,25 +25,28 @@ class TimelineTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return usersResultsDataSource.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("usernameCell", forIndexPath: indexPath)
+        let user = usersResultsDataSource[indexPath.row]
+        cell.textLabel?.text = user.username
 
         // Configure the cell...
 
         return cell
     }
-    */
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        self.presentingViewController?.performSegueWithIdentifier("toProfileSegue", sender: cell)
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

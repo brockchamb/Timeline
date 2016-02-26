@@ -49,13 +49,13 @@ class PostController {
     }
     
     static func orderPosts(post: [Post]) -> [Timeline.Post] {
-        
+        return []
     }
     
     static func mockPosts() -> [Post] {
-        let post1 = Post(imageEndPoint: "K1l4125TYvKMc7rcp5e", caption: "Nice!", username: "Brock", comments: <#T##[Comment]#>, likes: <#T##[Like]#>, identifier: nil)
-        let post2 = Post(imageEndPoint: "K1l4125TYvKMc7rcp5e", caption: nil, username: "Alex", comments: <#T##[Comment]#>, likes: <#T##[Like]#>, identifier: nil)
-        let post3 = Post(imageEndPoint: "K1l4125TYvKMc7rcp5e", caption: nil, username: "SammyB", comments: <#T##[Comment]#>, likes: <#T##[Like]#>, identifier: nil)
+        let post1 = Post(imageEndPoint: "K1l4125TYvKMc7rcp5e", caption: "Nice!", username: "Brock", comments: [], likes: [], identifier: nil)
+        let post2 = Post(imageEndPoint: "K1l4125TYvKMc7rcp5e", caption: nil, username: "Alex", comments: [], likes: [], identifier: nil)
+        let post3 = Post(imageEndPoint: "K1l4125TYvKMc7rcp5e", caption: nil, username: "SammyB", comments: [], likes: [], identifier: nil)
         return [post1, post2, post3]
     }
     

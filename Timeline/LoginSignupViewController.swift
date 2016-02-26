@@ -25,6 +25,8 @@ class LoginSignupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        updateViewBasedOnMode()
 
     }
 
@@ -50,11 +52,66 @@ class LoginSignupViewController: UIViewController {
         case Signup
     }
     
-    let mode: ViewMode = .Signup
+    var mode: ViewMode = .Signup
     
     func updateViewBasedOnMode() {
+        switch mode {
+        case .Login:
+            usernameTextField.hidden = true
+            bioTextField.hidden = true
+            urlTextField.hidden = true
+            
+            actionButton.setTitle("Login", forState: .Normal)
+            
+        case .Signup:
+            actionButton.setTitle("Signup", forState: .Normal)
+    
+        }
+
         
     }
+    
+    var fieldsAreValid: Bool {
+        get {
+            switch mode {
+            case .Login:
+                return (emailTextField.text!.isEmpty || passwordTextField.text!.isEmpty)
+            case .Signup:
+                return (usernameTextField.text!.isEmpty || emailTextField.text!.isEmpty || passwordTextField.text!.isEmpty)
+            }
+        }
+    }
+    
+    @IBAction func actionButtonTapped(sender: AnyObject) {
+        if fieldsAreValid {
+            switch mode {
+            case .Login :
+                return UserController.authenticateUser(emailTextField.text!, password: passwordTextField.text!, completion: { (success, user) -> Void in
+                    if success, let _ = user {
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                    } else {
+                        self.presentValidationAlertWithTitle("Unable to Login", message: "Please check username/password")
+                    }
+                    
+                    })
+            case .Signup:
+                return UserController.createUser(emailTextField.text!, username: usernameTextField.text!, password: passwordTextField.text!, bio: bioTextField.text, url: urlTextField.text, completion: { (success, user) -> Void in
+                    if success, let _ = user {
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                    } else {
+                        self.presentValidationAlertWithTitle("Unable to create user", message: "Please check your information and try again")
+                    }
+                    
+                })
+            }
+        }
+
+    }
+        func presentValidationAlertWithTitle(title: String, message: String) {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
     
     
     

@@ -10,15 +10,18 @@ import Foundation
 
 
 class UserController {
-    var currentUser = UserController.mockUsers().first
+    
+    private let kUser = "userKey"
+    var currentUser: User!
+    
     static let sharedController = UserController()
     
     static func userForIdentifier(identifier: String, completion: (user: User?) -> Void) {
         completion(user: mockUsers().first)
     }
     
-    static func fetchAllUsers(completion: (user: User) -> Void) {
-        completion(user: mockUsers().first!)
+    static func fetchAllUsers(completion: (user: [User]) -> Void) {
+        completion(user: mockUsers())
     }
     
     static func followUser(user: User, completion: (success: Bool) -> Void) {
@@ -31,6 +34,10 @@ class UserController {
     
     static func userFollowsUser(user: User, followsUser: User, completion: (follows: Bool) -> Void) {
         completion(follows: true)
+    }
+    
+    static func followedByUser(user: User, completion: (followed: [User]?) -> Void) {
+        
     }
     
     static func authenticateUser(email: String, password: String, completion: (success: Bool, user: User?) -> Void) {
