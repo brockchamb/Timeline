@@ -30,6 +30,7 @@
 		841196E81C7FF0D80094A9D4 /* UserSearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841196E71C7FF0D80094A9D4 /* UserSearchResultsTableViewController.swift */; };
 		841196EA1C800C470094A9D4 /* ProfileHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841196E91C800C470094A9D4 /* ProfileHeaderCollectionReusableView.swift */; };
 		841196EC1C8017C20094A9D4 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841196EB1C8017C20094A9D4 /* ImageCollectionViewCell.swift */; };
+		8448C2571C824BE9007C9A81 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448C2561C824BE9007C9A81 /* PostTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		841196E71C7FF0D80094A9D4 /* UserSearchResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchResultsTableViewController.swift; sourceTree = "<group>"; };
 		841196E91C800C470094A9D4 /* ProfileHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		841196EB1C8017C20094A9D4 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		8448C2561C824BE9007C9A81 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 		8411966C1C7D04690094A9D4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8448C2561C824BE9007C9A81 /* PostTableViewCell.swift */,
 				841196EB1C8017C20094A9D4 /* ImageCollectionViewCell.swift */,
 				841196E91C800C470094A9D4 /* ProfileHeaderCollectionReusableView.swift */,
 				841196E71C7FF0D80094A9D4 /* UserSearchResultsTableViewController.swift */,
@@ -333,6 +336,7 @@
 				841196671C7D013F0094A9D4 /* AddPhotoTableViewController.swift in Sources */,
 				841196E81C7FF0D80094A9D4 /* UserSearchResultsTableViewController.swift in Sources */,
 				841196751C7D0B1B0094A9D4 /* Post.swift in Sources */,
+				8448C2571C824BE9007C9A81 /* PostTableViewCell.swift in Sources */,
 				8411965F1C7CFAC10094A9D4 /* TimelineTableViewController.swift in Sources */,
 				841196EC1C8017C20094A9D4 /* ImageCollectionViewCell.swift in Sources */,
 				8411967C1C7D29BB0094A9D4 /* ImageController.swift in Sources */,

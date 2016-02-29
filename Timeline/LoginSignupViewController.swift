@@ -50,9 +50,12 @@ class LoginSignupViewController: UIViewController {
     enum ViewMode {
         case Login
         case Signup
+        case Edit
     }
     
     var mode: ViewMode = .Signup
+    
+    var user: User?
     
     func updateViewBasedOnMode() {
         switch mode {
@@ -65,10 +68,26 @@ class LoginSignupViewController: UIViewController {
             
         case .Signup:
             actionButton.setTitle("Signup", forState: .Normal)
+        case .Edit:
+            actionButton.setTitle("Update", forState: .Normal)
+            emailTextField.hidden = true
+            passwordTextField.hidden = true
+            
+            if let user = self.user {
+                
+                usernameTextField.text = user.username
+                bioTextField.text = user.bio
+                urlTextField.text = user.url
+            }
     
         }
 
         
+    }
+    
+    func updateWithUser(user: User) {
+        self.user = user
+        mode = .Edit
     }
     
     var fieldsAreValid: Bool {
@@ -78,6 +97,8 @@ class LoginSignupViewController: UIViewController {
                 return (emailTextField.text!.isEmpty || passwordTextField.text!.isEmpty)
             case .Signup:
                 return (usernameTextField.text!.isEmpty || emailTextField.text!.isEmpty || passwordTextField.text!.isEmpty)
+            case .Edit:
+                return(usernameTextField.text!.isEmpty)
             }
         }
     }
@@ -103,7 +124,17 @@ class LoginSignupViewController: UIViewController {
                     }
                     
                 })
+            case .Edit:
+                return UserController.updateUser(self.user!, username: self.usernameTextField.text!, bio: self.bioTextField.text, url: self.urlTextField.text, completion: { (success, user) -> Void in
+                    if success {
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                    } else {
+                        self.presentValidationAlertWithTitle("Unable to Update User", message: "Please check information and try again")
+                    }
+                })
             }
+        } else {
+            presentValidationAlertWithTitle("Missing Info", message: "Please check info and try again")
         }
 
     }
