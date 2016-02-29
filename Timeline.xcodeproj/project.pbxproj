@@ -31,6 +31,14 @@
 		841196EA1C800C470094A9D4 /* ProfileHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841196E91C800C470094A9D4 /* ProfileHeaderCollectionReusableView.swift */; };
 		841196EC1C8017C20094A9D4 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841196EB1C8017C20094A9D4 /* ImageCollectionViewCell.swift */; };
 		8448C2571C824BE9007C9A81 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448C2561C824BE9007C9A81 /* PostTableViewCell.swift */; };
+		8448C2E81C850875007C9A81 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8448C2E61C8507F3007C9A81 /* Firebase.framework */; };
+		8448C2E91C850875007C9A81 /* Firebase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8448C2E61C8507F3007C9A81 /* Firebase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8448C2EC1C850880007C9A81 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8448C2EB1C850880007C9A81 /* SystemConfiguration.framework */; };
+		8448C2EE1C850886007C9A81 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8448C2ED1C850886007C9A81 /* CFNetwork.framework */; };
+		8448C2F01C85088E007C9A81 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8448C2EF1C85088E007C9A81 /* Security.framework */; };
+		8448C2F21C85089B007C9A81 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8448C2F11C85089B007C9A81 /* libicucore.tbd */; };
+		8448C2F41C8508A4007C9A81 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8448C2F31C8508A4007C9A81 /* libc++.tbd */; };
+		8448C2F61C8508C0007C9A81 /* FirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448C2F51C8508C0007C9A81 /* FirebaseController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,20 @@
 			remoteInfo = Timeline;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8448C2EA1C850875007C9A81 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8448C2E91C850875007C9A81 /* Firebase.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		01E3FC211BE92C7600187536 /* Timeline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timeline.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +103,13 @@
 		841196E91C800C470094A9D4 /* ProfileHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		841196EB1C8017C20094A9D4 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		8448C2561C824BE9007C9A81 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		8448C2E61C8507F3007C9A81 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		8448C2EB1C850880007C9A81 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8448C2ED1C850886007C9A81 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		8448C2EF1C85088E007C9A81 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8448C2F11C85089B007C9A81 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		8448C2F31C8508A4007C9A81 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		8448C2F51C8508C0007C9A81 /* FirebaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseController.swift; path = ../FirebaseController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +117,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8448C2F41C8508A4007C9A81 /* libc++.tbd in Frameworks */,
+				8448C2F21C85089B007C9A81 /* libicucore.tbd in Frameworks */,
+				8448C2F01C85088E007C9A81 /* Security.framework in Frameworks */,
+				8448C2EE1C850886007C9A81 /* CFNetwork.framework in Frameworks */,
+				8448C2EC1C850880007C9A81 /* SystemConfiguration.framework in Frameworks */,
+				8448C2E81C850875007C9A81 /* Firebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +150,7 @@
 				01E3FC381BE92C7700187536 /* TimelineTests */,
 				01E3FC431BE92C7700187536 /* TimelineUITests */,
 				01E3FC221BE92C7600187536 /* Products */,
+				8448C2F71C8508D0007C9A81 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,11 +229,25 @@
 		841196761C7D0CBB0094A9D4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8448C2F51C8508C0007C9A81 /* FirebaseController.swift */,
 				841196771C7D12C80094A9D4 /* UserController.swift */,
 				841196791C7D20270094A9D4 /* PostController.swift */,
 				8411967B1C7D29BB0094A9D4 /* ImageController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8448C2F71C8508D0007C9A81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8448C2E61C8507F3007C9A81 /* Firebase.framework */,
+				8448C2F31C8508A4007C9A81 /* libc++.tbd */,
+				8448C2F11C85089B007C9A81 /* libicucore.tbd */,
+				8448C2EF1C85088E007C9A81 /* Security.framework */,
+				8448C2ED1C850886007C9A81 /* CFNetwork.framework */,
+				8448C2EB1C850880007C9A81 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +260,7 @@
 				01E3FC1D1BE92C7600187536 /* Sources */,
 				01E3FC1E1BE92C7600187536 /* Frameworks */,
 				01E3FC1F1BE92C7600187536 /* Resources */,
+				8448C2EA1C850875007C9A81 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -331,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8448C2F61C8508C0007C9A81 /* FirebaseController.swift in Sources */,
 				8411966B1C7D036C0094A9D4 /* LoginSignupViewController.swift in Sources */,
 				841196691C7D02FF0094A9D4 /* LoginSignupChoiceViewController.swift in Sources */,
 				841196671C7D013F0094A9D4 /* AddPhotoTableViewController.swift in Sources */,
@@ -489,6 +541,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Timeline/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = in.devmounta.Timeline;
@@ -500,6 +556,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Timeline/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = in.devmounta.Timeline;
