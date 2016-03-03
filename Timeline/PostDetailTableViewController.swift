@@ -37,7 +37,7 @@ class PostDetailTableViewController: UITableViewController {
         self.likesLabel.text = "\(post.likes.count) likes"
         self.commentsLabel.text = "\(post.comments.count) comments"
         
-        ImageController.imageForIdentifier(post.imageEndPoint) { (image) in
+        ImageController.imageForIdentifier(post.imageEndpoint) { (image) in
             self.headerImageView.image = image
         }
         tableView.reloadData()

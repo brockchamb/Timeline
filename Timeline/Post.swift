@@ -57,7 +57,7 @@ struct Post: Equatable, FirebaseType {
         }
     }
     
-    init(imageEndpoint: String, caption: String?, username: String, comments: [Comment], likes: [Like], identifier: String?) {
+    init(imageEndpoint: String, caption: String?, username: String, comments: [Comment] = [], likes: [Like] = [], identifier: String?) {
         self.imageEndpoint = imageEndpoint
         self.caption = nil
         self.username = username

@@ -33,7 +33,7 @@ class PostTableViewCell: UITableViewCell {
         self.likesLabel.text = "\(post.likes.count) likes"
         self.commentsLabel.text = "\(post.comments.count) comments"
         
-        ImageController.imageForIdentifier(post.imageEndPoint) { (image) in
+        ImageController.imageForIdentifier(post.imageEndpoint) { (image) in
             dispatch_async(dispatch_get_main_queue(), { () in
                 self.postImageView.image = image
             })

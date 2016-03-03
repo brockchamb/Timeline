@@ -15,7 +15,7 @@ struct User: Equatable, FirebaseType {
     private let kBio = "bio"
     private let kUrl = "url"
     
-    var username: String
+    var username = ""
     var bio: String?
     var url: String?
     var identifier: String?
